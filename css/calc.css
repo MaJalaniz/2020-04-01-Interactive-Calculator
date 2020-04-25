@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+div.enclose{
+    border:solid;
+    width:25%;
+    height:25%;
+    text-align: center;
+    margin-left:37%;
+    margin-right:10%;
+}
+div.screen{
+    border:1px solid;
+
+}
