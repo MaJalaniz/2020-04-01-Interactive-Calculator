@@ -3,15 +3,18 @@ function total(inputBill, inputTip){
      inputBill = document.getElementById("bill").value;
      inputTip = document.getElementById("tip").value;
      
-     let total = parseFloat((inputBill * (inputTip / 100))).toFixed(2);
+     let totalTip = parseFloat((inputBill * (inputTip / 100))).toFixed(2);
+     let totalAmount = +inputBill + +totalTip;
      let letters = /^[a-zA-Z]+$/;
 
      if(inputBill.match(letters) || inputTip.match(letters)){
-        total = document.getElementById("displayTotal").innerHTML = "$" + 0;
-     }else{
-       total = document.getElementById("displayTotal").innerHTML = "$" + total;
+        totalTip = document.getElementById("tipping").innerHTML = "$" + 0;
+        totalAmount = document.getElementById("grand").innerHTML = "$" + 0;
+    }else{
+       totalTip = document.getElementById("tipping").innerHTML = "$" + totalTip;
+       totalAmount = document.getElementById("grand").innerHTML = "$" + totalAmount;
      }
-    return  total;
+    return  totalAmount;
 }
 
 function dividingTotal(inputBill, groupTotal){
