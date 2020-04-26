@@ -1,6 +1,11 @@
 h1{
     text-align: center;
 }
+
+body{
+    background-color: lightgreen;
+}
+
 div.enclose{
     border:solid;
     width:25%;
@@ -8,8 +13,22 @@ div.enclose{
     text-align: center;
     margin-left:37%;
     margin-right:10%;
+    border-radius: 12px;
 }
 div.screen{
     border:1px solid;
 
+}
+input#bill{
+    width:26%;
+}
+input#tip{
+    width:26%;
+}
+input#groupAmount{
+    width:33%;
+}
+div#displayTotal.screen{
+    height:50px;
+    font-size:30px;
 }
