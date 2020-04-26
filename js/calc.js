@@ -13,7 +13,7 @@ function dividingTotal(inputBill, groupTotal){
     inputBill = document.getElementById("bill").value;
     groupTotal = document.getElementById("groupAmount").value;
 
-    let divideMeal = inputBill / groupTotal;
+    let divideMeal = parseFloat(inputBill / groupTotal).toFixed(2);
     let totalAmount = document.getElementById("displayTotal").innerHTML = "$" + divideMeal;
 
     return divideMeal;
