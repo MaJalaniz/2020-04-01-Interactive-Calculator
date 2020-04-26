@@ -10,11 +10,17 @@ function total(inputBill, inputTip){
 }
 
 function dividingTotal(inputBill, groupTotal){
+    
     inputBill = document.getElementById("bill").value;
     groupTotal = document.getElementById("groupAmount").value;
-
+    
+    let letters = /^[a-zA-Z]+$/;
     let divideMeal = parseFloat(inputBill / groupTotal).toFixed(2);
-    let totalAmount = document.getElementById("displayTotal").innerHTML = "$" + divideMeal;
-
+   
+    if(inputBill.match(letters)){
+         totalAmount = document.getElementById("displayTotal").innerHTML = "$" + 0;
+    }else{
+        totalAmount = document.getElementById("displayTotal").innerHTML = "$" + divideMeal;
+    }
     return divideMeal;
 }
